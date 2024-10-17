@@ -45,7 +45,7 @@ jobs:
           git reset
           git diff --diff-filter=D --name-only HEAD | xargs git checkout HEAD^ --
 
-      - name: Run Gitar Duet Action
-        uses: gitarcode/gitar-duet-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Run Gitar Duet Action
+      #  uses: gitarcode/gitar-duet-action@v1
+      #  with:
+      #    github-token: ${{ secrets.GITHUB_TOKEN }}

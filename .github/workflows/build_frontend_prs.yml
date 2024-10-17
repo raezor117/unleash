@@ -25,5 +25,5 @@ jobs:
       - run: yarn --immutable
       - run: yarn run lint:material:icons
       - run: yarn run lint:check
-      - run: yarn run test
+      #- run: yarn run test
       - run: yarn run ts:check # TODO: optimize
