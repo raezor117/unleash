@@ -24,11 +24,11 @@ const useUiConfig = (): IUseUIConfigOutput => {
     }, [data]);
 
     const isPro = useCallback(() => {
-        return true;
+        return false;
     }, [data]);
 
     const isEnterprise = useCallback(() => {
-        return false;
+        return true;
     }, [data]);
 
     const uiConfig: IUiConfig = useMemo(() => {
