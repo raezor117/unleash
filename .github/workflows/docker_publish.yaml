@@ -54,6 +54,11 @@ jobs:
       #      type=edge,prefix=main-,suffix=-${{ matrix.version }},enable=${{ github.ref == 'refs/heads/main' }}
       #      # only enabled on workflow_dispatch:
       #      type=sha,suffix=-${{ matrix.version }},enable=${{ github.event_name == 'workflow_dispatch' }}
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/raezor117/unleash
       - name: Login to docker hub
         uses: docker/login-action@v3
         with:
